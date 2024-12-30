@@ -45,7 +45,7 @@ app.use(morgan("dev"));
 app.use(
   cors({
     origin: [clientURL],
-    // methods: ["GET", "POST", "PUT", "DELETE"],
+     methods: ["GET", "POST", "PUT", "delete"],
     credentials: true,
   })
 );

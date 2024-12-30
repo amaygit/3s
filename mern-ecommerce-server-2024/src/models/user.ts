@@ -7,8 +7,8 @@ interface IUser extends Document {
   email: string;
   photo: string;
   role: "admin" | "user";
-  gender: "male" | "female";
-  dob: Date;
+  // gender: "male" | "female";
+  // dob: Date;
   createdAt: Date;
   updatedAt: Date;
   //   Virtual Attribute
@@ -40,15 +40,15 @@ const schema = new mongoose.Schema(
       enum: ["admin", "user"],
       default: "user",
     },
-    gender: {
-      type: String,
-      enum: ["male", "female"],
-      required: [true, "Please enter Gender"],
-    },
-    dob: {
-      type: Date,
-      required: [true, "Please enter Date of birth"],
-    },
+    // gender: {
+    //   type: String,
+    //   enum: ["male", "female"],
+    //   required: [true, "Please enter Gender"],
+    // },
+    // dob: {
+    //   type: Date,
+    //   required: [true, "Please enter Date of birth"],
+    // },
   },
   {
     timestamps: true,

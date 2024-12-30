@@ -11,8 +11,8 @@ import { useDispatch } from "react-redux";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const [gender, setGender] = useState("");
-  const [date, setDate] = useState("");
+  // const [gender, setGender] = useState("");
+  // const [date, setDate] = useState("");
 
   const [login] = useLoginMutation();
 
@@ -25,9 +25,9 @@ const Login = () => {
         name: user.displayName!,
         email: user.email!,
         photo: user.photoURL!,
-        gender,
+        // gender,
         role: "user",
-        dob: date,
+        // dob: date,
         _id: user.uid,
       });
 
@@ -35,9 +35,9 @@ const Login = () => {
         name: user.displayName!,
         email: user.email!,
         photo: user.photoURL!,
-        gender,
+        // gender,
         role: "user",
-        dob: date,
+        // dob: date,
         _id: user.uid,
       });
 
@@ -60,7 +60,7 @@ const Login = () => {
     <div className="login">
       <main>
         <h1 className="heading">Login</h1>
-
+{/* 
         <div>
           <label>Location</label>
           <select value={gender} onChange={(e) => setGender(e.target.value)}>
@@ -68,7 +68,7 @@ const Login = () => {
             <option value="male">Banglore</option>
             <option value="female">City Outskirt From Banglore</option>
           </select>
-        </div>
+        </div> */}
 
         {/* <div>
           <label>Date of birth</label>

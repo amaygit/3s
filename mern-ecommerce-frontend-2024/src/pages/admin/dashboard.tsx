@@ -104,7 +104,7 @@ const Dashboard = () => {
             </section>
 
             <section className="transaction-container">
-              <div className="gender-chart">
+              {/* <div className="gender-chart">
                 <h2>Location Ratio</h2>
                 <DoughnutChart
                   labels={["Non", "Banglore"]}
@@ -118,7 +118,7 @@ const Dashboard = () => {
                 <p>
                   <BiMaleFemale />
                 </p>
-              </div>
+              </div> */}
               <Table data={stats.latestTransaction} />
             </section>
           </>
