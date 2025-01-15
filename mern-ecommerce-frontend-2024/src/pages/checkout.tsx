@@ -16,8 +16,8 @@ import { NewOrderRequest } from "../types/api-types";
 import { responseToast } from "../utils/features";
 
 const stripeKey =
-  "pk_test_51OHpE1SEOz14slwcBOcGOweicHk9XITWgND9NAvr7ZJXIYdUiNyOHQtrbCsdQTLQqVAgDNeaDpPshuIO1PnHthtq00AJdf3gtG";
-
+ // "pk_test_51OHpE1SEOz14slwcBOcGOweicHk9XITWgND9NAvr7ZJXIYdUiNyOHQtrbCsdQTLQqVAgDNeaDpPshuIO1PnHthtq00AJdf3gtG";
+"pk_test_51MWCt1SH5JqhfHZ4dzovWginPmEyDvbXM6xHvRlr350fQFbBfBKpx8gPsTbx0cH2IbeZ5jZRByZ7R9SmN0NPWC0j00g08w71O1"
 const stripePromise = loadStripe(stripeKey);
 
 const CheckOutForm = () => {

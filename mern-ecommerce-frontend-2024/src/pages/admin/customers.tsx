@@ -18,7 +18,7 @@ interface DataType {
   avatar: ReactElement;
   name: string;
   email: string;
-  gender: string;
+  // gender: string;
   role: string;
   action: ReactElement;
 }
@@ -32,10 +32,10 @@ const columns: Column<DataType>[] = [
     Header: "Name",
     accessor: "name",
   },
-  {
-    Header: "Gender",
-    accessor: "gender",
-  },
+  // {
+  //   Header: "Gender",
+  //   accessor: "gender",
+  // },
   {
     Header: "Email",
     accessor: "email",
@@ -84,7 +84,7 @@ const Customers = () => {
           ),
           name: i.name,
           email: i.email,
-          gender: i.gender,
+          // gender: i.gender,
           role: i.role,
           action: (
             <button onClick={() => deleteHandler(i._id)}>

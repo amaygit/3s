@@ -11,7 +11,7 @@ import { User } from "../types/types";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import toast from "react-hot-toast";
-import { div } from "framer-motion/client";
+// import { div } from "framer-motion/client";
 
 interface PropsType {
   user: User | null;

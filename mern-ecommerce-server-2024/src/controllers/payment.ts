@@ -50,7 +50,7 @@ export const createPaymentIntent = TryCatch(async (req, res, next) => {
 
   const tax = subtotal * 0.18;
 
-  const shipping = subtotal > 1000 ? 0 : 200;
+  const shipping = subtotal > 1000 ? 100 : 200;
 
   const total = Math.floor(subtotal + tax + shipping - discountAmount);
 

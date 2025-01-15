@@ -1,5 +1,5 @@
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { useState } from "react";
+// import { useState } from "react";
 import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
 import { auth } from "../firebase";
@@ -15,7 +15,7 @@ const Login = () => {
   // const [date, setDate] = useState("");
 
   const [login] = useLoginMutation();
-
+  // const userPhoto = user.photoURL || "default-photo-url"; 
   const loginHandler = async () => {
     try {
       const provider = new GoogleAuthProvider();
@@ -24,7 +24,7 @@ const Login = () => {
       console.log({
         name: user.displayName!,
         email: user.email!,
-        photo: user.photoURL!,
+        photo: user.photoURL,
         // gender,
         role: "user",
         // dob: date,
@@ -39,6 +39,8 @@ const Login = () => {
         role: "user",
         // dob: date,
         _id: user.uid,
+        // gender: "",
+        // dob: ""
       });
 
       if ("data" in res) {
