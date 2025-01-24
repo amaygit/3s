@@ -34,7 +34,7 @@ const Header = ({ user }: PropsType) => {
     <header className="header">
       {/* Left Section: Logo */}
       <div className="logo">
-        <h2>1-Ark</h2>
+        <Link to={"/"}><h2>1-Ark</h2></Link>
       </div>
     <nav className="nav">
       <Link onClick={() => setIsOpen(false)} to={"/"}>

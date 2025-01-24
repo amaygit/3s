@@ -25,9 +25,7 @@ const Login = () => {
         name: user.displayName!,
         email: user.email!,
         photo: user.photoURL,
-        // gender,
         role: "user",
-        // dob: date,
         _id: user.uid,
       });
 
@@ -35,12 +33,8 @@ const Login = () => {
         name: user.displayName!,
         email: user.email!,
         photo: user.photoURL!,
-        // gender,
         role: "user",
-        // dob: date,
         _id: user.uid,
-        // gender: "",
-        // dob: ""
       });
 
       if ("data" in res) {
