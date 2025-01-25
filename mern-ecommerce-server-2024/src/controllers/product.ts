@@ -130,6 +130,7 @@ export const newProduct = TryCatch(
   }
 );
 
+
 export const updateProduct = TryCatch(async (req, res, next) => {
   const { id } = req.params;
   const { name, price, stock, category, description } = req.body;
@@ -361,6 +362,8 @@ export const deleteReview = TryCatch(async (req, res, next) => {
     message: "Review Deleted",
   });
 });
+
+
 
 // const generateRandomProducts = async (count: number = 10) => {
 //   const products = [];

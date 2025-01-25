@@ -56,7 +56,7 @@ const Dashboard = () => {
                 heading="Users"
               />
               <WidgetItem
-                percent={stats.changePercent.order}
+                percent={stats.changePercent.order} 
                 value={stats.count.order}
                 color="rgb(255 196 0)"
                 heading="Transactions"

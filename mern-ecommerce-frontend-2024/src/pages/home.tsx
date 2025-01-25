@@ -13,7 +13,9 @@ import { Slider } from "6pp";
 import { TbTruckDelivery } from "react-icons/tb";
 import {useEffect,useState} from "react";
 import { LuShieldCheck } from "react-icons/lu";
-
+import {
+  useCategoriesQuery,
+} from "../redux/api/productAPI";
 
 const clients = [
   {
@@ -108,23 +110,24 @@ const banners= [
   "http://surl.li/fowcrx",
 
 ];
-const categories = [
-  "Steel",
-  "Cement",
-  "Raw Materials",
-  "Brick and Blocks",
-  "Wood materials",
-  "Electrical items",
-  "Plumbing",
-  "Flooring",
-  "Painting",
-  "Roofing",
-  "Interior Works",
-  "Tower Cranes",
-  "Mobile Cranes",
-  "Forklifts",
-  "Telehandlers"
-];
+// const categories = [
+//   "Steel",
+//   "Cement",
+//   "Raw Materials",
+//   "Brick and Blocks",
+//   "Wood materials",
+//   "Electrical items",
+//   "Plumbing",
+//   "Flooring",
+//   "Painting",
+//   "Roofing",
+//   "Interior Works",
+//   "Tower Cranes",
+//   "Mobile Cranes",
+//   "Forklifts",
+//   "Telehandlers"
+// ];
+
 
 const services = [
   {
@@ -146,6 +149,12 @@ const services = [
 
 const Home = () => {
   const { data, isError, isLoading } = useLatestProductsQuery("");
+
+  const {
+    data: categoriesResponse,
+    // isLoading: loadingCategories,
+
+  } = useCategoriesQuery("");
 
   const dispatch = useDispatch();
 
@@ -170,7 +179,7 @@ const Home = () => {
     };
     useEffect(() => {
       const updateColors = () => {
-        const newColors = categories.map(() => getRandomColor());
+        const newColors =  categoriesResponse?.categories.map(() => getRandomColor());
         setColors(newColors);
         console.log(colors);
         
@@ -180,7 +189,7 @@ const Home = () => {
       const interval = setInterval(updateColors, 2000); // Change colors every second
   
       return () => clearInterval(interval); // Cleanup on unmount
-    }, [categories]);
+    }, [categoriesResponse]);
   return (
     <>
       <div className="home">
@@ -190,10 +199,10 @@ const Home = () => {
           <aside>
             <h1>Categories</h1>
             <ul>
-              {categories.map((category,index) => (
+              { categoriesResponse?.categories.map((category,index) => (
                 <li key={category}
                 style={{
-                  color: colors[index] || "black", // Use color from state or fallback
+                  // color: colors[index] || "black", // Use color from state or fallback
                   transition: "color 0.5s ease", // Smooth transition
                 }}
                 >

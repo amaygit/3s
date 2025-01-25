@@ -1,5 +1,5 @@
 import { useFileHandler } from "6pp";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import AdminSidebar from "../../../components/admin/AdminSidebar";
@@ -8,7 +8,7 @@ import { RootState } from "../../../redux/store";
 import { responseToast } from "../../../utils/features";
 
 const NewProduct = () => {
-  const categories = [
+   const [categories, setCategories] = useState([
     "Steel",
     "Cement",
     "Raw Materials",
@@ -24,7 +24,9 @@ const NewProduct = () => {
     "Mobile Cranes",
     "Forklifts",
     "Telehandlers"
-  ];
+  ])
+  const [categ, setCateg] = useState('')
+  // const categories = 
   const { user } = useSelector((state: RootState) => state.userReducer);
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -70,7 +72,10 @@ const NewProduct = () => {
       setIsLoading(false);
     }
   };
-
+  
+// useEffect(()=>{
+    
+// },[])
   return (
     <div className="admin-container">
       <AdminSidebar />
@@ -137,12 +142,15 @@ const NewProduct = () => {
                 <option value="" disabled>
                   Select a Category
                 </option>
+                
                 {categories.map((cat, index) => (
                   <option key={index} value={cat}>
                     {cat}
                   </option>
                 ))}
               </select>
+              <button onClick={() => {if (categ) {setCategories(prev => [...prev, categ]);}}}>Add Category</button>
+              <input type="text"  value={categ} onChange={(e)=>{setCateg(e.target.value)}}/>
             </div>
 
             <div>

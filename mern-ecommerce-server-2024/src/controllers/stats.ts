@@ -237,7 +237,7 @@ export const getPieCharts = TryCatch(async (req, res, next) => {
       Product.countDocuments(),
       Product.countDocuments({ stock: 0 }),
       allOrderPromise,
-      // User.find({}).select(["dob"]),
+      User.find({}).select(["dob"]),
       User.countDocuments({ role: "admin" }),
       User.countDocuments({ role: "user" }),
     ]);
@@ -288,11 +288,11 @@ export const getPieCharts = TryCatch(async (req, res, next) => {
       marketingCost,
     };
 
-    // const usersAgeGroup = {
-    //   teen: allUsers.filter((i) => i.age < 20).length,
-    //   adult: allUsers.filter((i) => i.age >= 20 && i.age < 40).length,
-    //   old: allUsers.filter((i) => i.age >= 40).length,
-    // };
+    const usersAgeGroup = {
+      teen: allUsers.filter((i) => i.age < 20).length,
+      adult: allUsers.filter((i) => i.age >= 20 && i.age < 40).length,
+      old: allUsers.filter((i) => i.age >= 40).length,
+    };
 
     const adminCustomer = {
       admin: adminUsers,

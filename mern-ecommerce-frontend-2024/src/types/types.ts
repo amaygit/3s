@@ -92,10 +92,10 @@ export type Stats = {
     order: number[];
     revenue: number[];
   };
-  userRatio: {
-    male: number;
-    female: number;
-  };
+  // userRatio: {
+  //   male: number;
+  //   female: number;
+  // };
   latestTransaction: LatestTransaction[];
 };
 
