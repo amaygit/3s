@@ -103,11 +103,12 @@ const clients = [
 //   "https://res.cloudinary.com/dj5q966nb/image/upload/v1719253433/ticeufjqvf6napjhdiee.png",
 // ];
 const banners= [
-  "http://surl.li/zllpqk",
-  "http://surl.li/vuximd",
-  "http://surl.li/owdtkx",
-  "http://surl.li/quixzz",
-  "http://surl.li/fowcrx",
+  "https://fancyhouse-design.com/wp-content/uploads/2023/12/A-console-table-near-the-entrance-provides-a-stylish-spot-for-keys-and-decorative-accents.jpg",
+
+  "https://fancyhouse-design.com/wp-content/uploads/2023/12/A-cozy-area-rug-adds-warmth-and-texture-to-the-living-space.jpg",
+  "https://fancyhouse-design.com/wp-content/uploads/2023/12/A-glass-top-coffee-table-adds-a-touch-of-elegance-while-keeping-the-space-airy.jpg",
+  "https://fancyhouse-design.com/wp-content/uploads/2023/12/A-modular-sofa-allows-for-customizable-seating-arrangements-to-suit-any-occasion.jpg",
+  "https://fancyhouse-design.com/wp-content/uploads/2023/12/A-pair-of-accent-chairs-creates-a-cozy-reading-nook-by-the-window.jpg",
 
 ];
 // const categories = [
