@@ -14,7 +14,9 @@ import { RootState } from "../../../redux/store";
 import { responseToast, transformImage } from "../../../utils/features";
 
 const Productmanagement = () => {
-  const categories = [
+
+  const [categ, setCateg] = useState('')
+  const [categories, setCategories] = useState([
     "Steel",
     "Cement",
     "Raw Materials",
@@ -30,7 +32,25 @@ const Productmanagement = () => {
     "Mobile Cranes",
     "Forklifts",
     "Telehandlers"
-  ];
+  ])
+
+  // const categories = [
+  //   "Steel",
+  //   "Cement",
+  //   "Raw Materials",
+  //   "Brick and Blocks",
+  //   "Wood materials",
+  //   "Electrical items",
+  //   "Plumbing",
+  //   "Flooring",
+  //   "Painting",
+  //   "Roofing",
+  //   "Interior Works",
+  //   "Tower Cranes",
+  //   "Mobile Cranes",
+  //   "Forklifts",
+  //   "Telehandlers"
+  // ];
   const [categorie, setCategory] = useState<string>("");
   const { user } = useSelector((state: RootState) => state.userReducer);
 
@@ -203,6 +223,9 @@ const Productmanagement = () => {
                   </option>
                 ))}
               </select>
+              <button onClick={() => {if (categ) {setCategories(prev => [...prev, categ]);}}}>Add Category</button>
+              <input type="text"  value={categ} onChange={(e)=>{setCateg(e.target.value)}}/>
+          
                 </div>
 
                 <div>

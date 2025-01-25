@@ -1,5 +1,5 @@
 import { useFileHandler } from "6pp";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import AdminSidebar from "../../../components/admin/AdminSidebar";
@@ -73,9 +73,7 @@ const NewProduct = () => {
     }
   };
   
-// useEffect(()=>{
-    
-// },[])
+
   return (
     <div className="admin-container">
       <AdminSidebar />

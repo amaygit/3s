@@ -11,7 +11,7 @@ import { FaAnglesDown, FaHeadset } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { Slider } from "6pp";
 import { TbTruckDelivery } from "react-icons/tb";
-import {useEffect,useState} from "react";
+// import {useEffect,useState} from "react";
 import { LuShieldCheck } from "react-icons/lu";
 import {
   useCategoriesQuery,
@@ -170,26 +170,26 @@ const Home = () => {
     "Ecommerce isn't just shopping; it's a vibrant experience. Products, images, and descriptions speak volumes, creating a connection with every click. It's a way to discover stories, find inspiration, or fulfill needs seamlessly.".split(
       " "
     );
-    const [colors, setColors] = useState<string[]>([]);
-    const getRandomColor = () => {
-      const r = Math.floor(Math.random() * 256); // Random Red
-      const g = Math.floor(Math.random() * 256); // Random Green
-      const b = Math.floor(Math.random() * 256); // Random Blue
-      return `rgb(${r}, ${g}, ${b})`;
-    };
-    useEffect(() => {
-      const updateColors = () => {
-        const newColors =  categoriesResponse?.categories.map(() => getRandomColor());
-        setColors(newColors);
-        console.log(colors);
+    // const [colors, setColors] = useState<string[]>([]);
+    // const getRandomColor = () => {
+    //   const r = Math.floor(Math.random() * 256); // Random Red
+    //   const g = Math.floor(Math.random() * 256); // Random Green
+    //   const b = Math.floor(Math.random() * 256); // Random Blue
+    //   return `rgb(${r}, ${g}, ${b})`;
+    // };
+    // useEffect(() => {
+    //   const updateColors = () => {
+    //     const newColors =  categoriesResponse?.categories.map(() => getRandomColor());
+    //     setColors(newColors);
+    //     console.log(colors);
         
-      };
+    //   };
   
-      updateColors(); // Set initial colors
-      const interval = setInterval(updateColors, 2000); // Change colors every second
+    //   updateColors(); // Set initial colors
+    //   const interval = setInterval(updateColors, 2000); // Change colors every second
   
-      return () => clearInterval(interval); // Cleanup on unmount
-    }, [categoriesResponse]);
+    //   return () => clearInterval(interval); // Cleanup on unmount
+    // }, [categoriesResponse]);
   return (
     <>
       <div className="home">
@@ -199,7 +199,7 @@ const Home = () => {
           <aside>
             <h1>Categories</h1>
             <ul>
-              { categoriesResponse?.categories.map((category,index) => (
+              { categoriesResponse?.categories.map((category) => (
                 <li key={category}
                 style={{
                   // color: colors[index] || "black", // Use color from state or fallback
